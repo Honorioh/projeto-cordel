@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap'); 
+/* os dois import são as fontes do fonts.google*/
+
+:root { /*para colocar fonte do font.google, vc impostar a fonte como esta a cima, e depois coloca o root, e as fontes como a baixo, a fonte1 é a padrao que colocamos, as outras duas foram importadas*/
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', sans-serif;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+    
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 3.0vw;
+    /* temos duas formas de usar o tamanho da font, a primeira é a EM e a segunda é a VW que seria a largura da tela, usando exemplo 5vw seria 5 % da largura da tela.*/
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-family: var(--fonte2);
+    font-variant: small-caps; /* tambem usada para deixar maiusculas,
+     porem somente a primeira letra é grande as outras ficam um pouco menores*/
+
+    /*text-transform: uppercase; deixa as letras maiusculas*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover { /*quando passa o mouse em cima aparece o sublinhado ou outra decoração que eu escolha, pra isso serve o hover*/
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-size: 3.0vw;
+    font-family: var(--fonte3);
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+    
+}
+
+section.imagem {
+    background-color: rgb(53, 53, 53);
+    color: white;
+    box-shadow: inset 6px 6px 10px 0px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-attachment: fixed; /*para deixar efeito paralax na imagem, mto legal*/
+}
+
+section.imagem > p {
+    display: inline-block; /*serve para a caixa se adaptar no tamanho do conteudo*/
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.39);
+    text-shadow: 1px 1px 0px black;
+    
+    
+}
+
+section#img01 { /*para usar id no class usa #*/
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+    
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
